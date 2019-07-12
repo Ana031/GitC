@@ -85,12 +85,13 @@ namespace SistemaBibliotecaOnline
         /// </summary>
         /// <param name="nomeLivro">Nome do livro a ser pesquisado</param>
         /// <returns>Retorna verdadeiro caso o livro estiveja livre para alocação</returns>
-        public static bool PesquisaLivroParaAlocacao(string nomeLivro)
+        public static bool? PesquisaLivroParaAlocacao(string nomeLivro)
         {
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
 
-                if (nomeLivro == baseDeLivros[i, 0])
+                if (CompararNomes(nomeLivro, baseDeLivros[i, 0]))
+
                 {
                     Console.WriteLine($"O livro: {nomeLivro}" +
                         $" pode ser alocado? -> {baseDeLivros[i, 1]}");
@@ -98,7 +99,23 @@ namespace SistemaBibliotecaOnline
                     return baseDeLivros[i, 1] == "sim";
                 }
             }
-            return false;
+
+            Console.WriteLine("Nenhum livro encontrado. Deseja realizar a busca novamente?");
+            Console.WriteLine("Digite o númeri da opção desejada: Sim(1) Não(0)");
+
+            int.TryParse(Console.ReadKey().KeyChar.ToString(), out int opcao);
+            
+            if(opcao == 1)                                                             //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+            {                                                                          //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+                                                                                       //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+                Console.WriteLine("Digite o nome do livro a ser pesquisado:");         //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+                nomeLivro = Console.ReadLine();                                        //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+                                                                                       //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+                return PesquisaLivroParaAlocacao(nomeLivro);                           //Pode ser usado para senhas, geralndo um loop e não deixando sair enquanto a senha estiver errada
+
+            }
+
+            return null;
 
         }
         /// <summary>
@@ -110,7 +127,7 @@ namespace SistemaBibliotecaOnline
         {
             for (int i = 0; i < baseDeLivros.GetLength(0); i++)
             {
-                if (nomeLivro == baseDeLivros[i, 0])
+                if (CompararNomes(nomeLivro , baseDeLivros[i, 0])) 
                 {
                     baseDeLivros[i, 1] = alocar ? "não" : "sim";
                 }
@@ -128,7 +145,10 @@ namespace SistemaBibliotecaOnline
             MostrarMenuInicialLivros("Alocar um Livro");
 
             var nomedolivro = Console.ReadLine();
-            if (PesquisaLivroParaAlocacao(nomedolivro))
+            var resultadoPesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+
+
+            if (resultadoPesquisa != null && resultadoPesquisa == true)
             {
                 Console.Clear();
                 MostrarListaDeLivros();
@@ -140,6 +160,11 @@ namespace SistemaBibliotecaOnline
 
                 Console.ReadKey();
             }
+            if (resultadoPesquisa == null)
+            {
+                Console.WriteLine("Nenhum livro encontrado em nossa base de dados do sistema.");
+            }
+
         }
         /// <summary>
         /// Metoda que mostra a lista de livros atualizada
@@ -160,7 +185,9 @@ namespace SistemaBibliotecaOnline
             MostrarListaDeLivros();
 
             var nomedolivro = Console.ReadLine();
-            if (!PesquisaLivroParaAlocacao(nomedolivro))
+            var resultadoPesquisa = PesquisaLivroParaAlocacao(nomedolivro);
+
+            if (resultadoPesquisa != null && resultadoPesquisa == false) 
             {
                 Console.Clear();
                 MostrarListaDeLivros();
@@ -171,6 +198,13 @@ namespace SistemaBibliotecaOnline
                 MostrarListaDeLivros();
 
                 Console.ReadKey();
+
+            }
+            if (resultadoPesquisa == null) 
+            {
+                Console.WriteLine("Nenhum livro enconrado em nossa base de dados do sistema .");
+
+
             }
         }
         public static void MostrarMenuInicialLivros(string operacao)
@@ -181,7 +215,21 @@ namespace SistemaBibliotecaOnline
             MostrarSejaBemVindo();
 
             Console.WriteLine($"  MENU  -  {operacao}");
-            Console.WriteLine("  Digite o nome do livro a ser alocado");
+            Console.WriteLine("  Digite o nome do livro");
+        }
+        /// <summary>
+        /// Metodo que para duas string deixando em caixa baixa e removendo espaços vazios dentro da mesma
+        /// </summary>
+        /// <param name="primeiro">Primeira string a ser comparada</param>
+        /// <param name="segundo">Segunda string a ser comparada</param>
+        /// <returns></returns>
+        public static bool CompararNomes(string primeiro, string segundo)
+        {
+            if (primeiro.ToLower().Replace(" ", "") 
+                == segundo.ToLower().Replace(" ", ""))
+                return true;
+
+            return false;
         }
             
     }
