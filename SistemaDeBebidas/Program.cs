@@ -16,24 +16,22 @@ namespace SistemaDeBebidas
             {
                 Console.WriteLine("Informe seu nome e idade:");
                 var nome = Console.ReadLine();
-                
-                
+  
                 int.TryParse(Console.ReadLine(), out int idade);
                 Console.Clear();
 
-                if (idade > 18)
+                if (idade >= 18)
                 {
 
-                    Console.WriteLine("Liberado");
-                    
+                    Console.WriteLine("Ta liberadooo");   
                 }
                 else
                 {
-                    Console.WriteLine("Proibido");
-                    
+                    Console.WriteLine("Lamento, vai ficar só olhando os outros beberem");
                 }
                 
                 Console.ReadKey();
+                Console.Clear();
             }
 
         }
