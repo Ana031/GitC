@@ -74,14 +74,9 @@ namespace Beep
                 //Em caso de não ser informado uma string valida para nosso menu de opções, ele executa esse cara
                 default: { Console.WriteLine("Não foi uma escolha valida dentro do menu de opções"); } break;
 
-
             }
 
-
-
             Console.WriteLine();
-
-
 
         }
 
@@ -93,7 +88,7 @@ namespace Beep
 
             Thread.Sleep(thread);
 
-            Console.Beep(1320, 500);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -101,7 +96,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(880, 500);
+            Console.Beep(880, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -119,15 +114,15 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1320, 500);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1188, 500);
+            Console.Beep(1188, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(990, 500);
+            Console.Beep(990, 250);
 
         }
 
@@ -167,7 +162,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1760, 500);
+            Console.Beep(1760, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -181,11 +176,11 @@ namespace Beep
 
             Thread.Sleep(thread * 5);
 
-            Console.Beep(1320, 125);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(990, 750);
+            Console.Beep(990, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -193,7 +188,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1188, 500);
+            Console.Beep(1188, 250);
 
         }
 
@@ -203,7 +198,7 @@ namespace Beep
 
             Thread.Sleep(thread * 6);
 
-            Console.Beep(1188, 125);
+            Console.Beep(1188, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -215,7 +210,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1320, 500);//
+            Console.Beep(1320, 250);//
 
         }
 
@@ -229,15 +224,15 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1188, 500);
+            Console.Beep(1188, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1320, 750);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1056, 500);
+            Console.Beep(1056, 250);
 
         }
 
@@ -251,7 +246,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1320, 500);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
@@ -259,7 +254,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(880, 500);
+            Console.Beep(880, 250);
 
         }
 
@@ -269,19 +264,19 @@ namespace Beep
 
             Thread.Sleep(thread * 9);
 
-            Console.Beep(880, 500);
+            Console.Beep(880, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1056, 500);
+            Console.Beep(1056, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(1320, 500);
+            Console.Beep(1320, 250);
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(880, 500);
+            Console.Beep(880, 250);
 
         }
 
@@ -295,7 +290,7 @@ namespace Beep
 
             Thread.Sleep(thread * 10);
 
-            Console.Beep(880, 500);
+            Console.Beep(880, 250);
 
             Thread.Sleep(thread * 10);
 
