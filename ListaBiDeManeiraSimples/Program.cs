@@ -17,6 +17,17 @@ namespace ListaBiDeManeiraSimples
             //Aqui com estamos usando apenas uma referencia da nossa lista colocamos ref ao passar ela ao metodo
             CarregaInformacoesEListaElasNaTela(ref listaDeNome);
 
+            //Após carregar as informações e mostrar na tela ele espera um comando
+            Console.ReadKey();
+
+            //Indicamos que o usuario precisa informar um número de identificação para pesquisar um registro
+            Console.WriteLine("Informe o ID do registro a ser pesquisado.");
+            //Aqui como realizamos o registro apenas na chamada
+            //Passamos a nossa lista normalmente pois não iremos alterar e apenas pesquisar o informação
+            //Após a virgula temos o console readline que espra nosso identificador unico
+            PesquisandoInformacoesNaNossaLista(listaDeNome, Console.ReadLine());
+
+            Console.ReadKey();
 
         }
 
@@ -54,7 +65,7 @@ namespace ListaBiDeManeiraSimples
         /// </summary>
         /// <param name="arrayBi">Nossa coleção de informaçoes</param>
         /// <param name="pId">Nosso identificador unico</param>
-        public static void PesquisandoInformacoesNaNossaLista(ref string[,] arrayBi, string pId)
+        public static void PesquisandoInformacoesNaNossaLista( string[,] arrayBi, string pId)
         {
             for (int i = 0; i < arrayBi.GetLength(0); i++)
             {
