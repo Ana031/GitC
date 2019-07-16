@@ -11,7 +11,7 @@ namespace InserindoERemovendo
         static void Main(string[] args)
         {
             //Criamos a nossa base de dados inicial
-            string[,] baseDeDados = new string[2, 3];
+            string[,] baseDeDados = new string[2, 5];
             //Indicador do registro realizado em nosso sistema
             int IndiceBaseDeDados = 0;
             //Apresentação inicial do nosso sistema
@@ -25,14 +25,20 @@ namespace InserindoERemovendo
                 switch (escolhaIncial)
                 {
                     case "1": { InseriValoresNaLista(ref baseDeDados, ref IndiceBaseDeDados); } break;
+                        //remove informações da lista
                     case "2": { RemoverInformacoes(ref baseDeDados); } break;
-                    case "3": {  MostrarInformacoes(baseDeDados); } break;
-                    case "4": {                  
-                            //Return dentro do nosso caso de escolha ele sai do nosso metodo principal ou
-                            //metodo que estamos dentro do contexto
-                            return;
-                        }
+                        //lista as informações da lista
+                    case "3": { MostrarInformacoes(baseDeDados); } break;
+                        //menu que mostra apenas registros desativados
+                    case "4": { MostrarInformacoes(baseDeDados, "true"); } break; 
+                        //sai do sistema
+                    case "5": {
+                    //return dentro do nosso caso de escolha ele sai do nosso metodo principal ou
+                    //metodo que estamos dentro do contexto
+                    return;
+
                 }
+            }
                 //Alimento a escolha novamente
                 escolhaIncial = ApresentaMenuInicial();
             }
@@ -86,6 +92,10 @@ namespace InserindoERemovendo
                 baseDeDados[i, 1] = nome;
                 //Carrega na terceira coluna o valor do nome
                 baseDeDados[i, 2] = idade;
+                //carrega a coluna que identifica se o registro esta ativo
+                baseDeDados[i, 3] = "true";
+                //identificamos agora a data e a hora de criação dos registros dentro do sistema
+                baseDeDados[i, 4] = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
                 //Finalizamos aqui para apenas inserir um registro por vez
                 break;
             }
@@ -97,15 +107,23 @@ namespace InserindoERemovendo
         /// <summary>
         /// Mostra as informações dentro da nossa lista de dados"base de dados"
         /// </summary>
-        /// <param name="baseDeDados">base de dados para a leitura e mostra pro usuario</param>
-        public static void MostrarInformacoes(string[,] baseDeDados)
+        /// <param name="baseDeDados">base de dados para a leitura e mostrar pro usuario</param>
+        /// <param name="mostrarRegistrosNAtivos">Quando identificado com o valor true, o mesmo
+        /// mostra os valores que não estão ativos dentro do sistema</param>
+        public static void MostrarInformacoes(string[,] baseDeDados, string mostrarRegistrosNAtivos = "false")
         {
             Console.WriteLine("Apresentação das informações dentro da base de dados.");
-
+            if (mostrarRegistrosNAtivos == "true")
+                Console.WriteLine("Registros desativados dentro do sistema:");
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
+            {
+                //aqui deixamos de mostrar as informações que foram desabilitadas dentro do sistema
+                if(baseDeDados[i, 3] != mostrarRegistrosNAtivos)
                 Console.WriteLine($"ID {baseDeDados[i, 0]} " +
                     $" -Nome:{baseDeDados[i, 1]} " +
-                    $"- Idade: {baseDeDados[i, 2]}");
+                    $"- Idade: {baseDeDados[i, 2]}" +
+                    $"- DataAlteração: {baseDeDados[i, 4]}");
+            }
 
             Console.WriteLine("Resultado apresentado com sucesso!");
             Console.WriteLine("Para voltar ao menu inicial apertar qualquer tecla");
@@ -121,9 +139,13 @@ namespace InserindoERemovendo
             Console.WriteLine("Area de remoção do registro do sistema");
 
             for (int i = 0; i < baseDeDados.GetLength(0); i++)
+            {
+                //identifica que so deve remover os valores ativos dentro do sistema 
+                if (baseDeDados[i, 3] != "false") 
                 Console.WriteLine($"ID:{baseDeDados[i, 0]}" +
                      $"- Nome:{baseDeDados[i, 1]} " +
                     $"- Idade:{baseDeDados[i, 2]}");
+            }
             Console.WriteLine("Informe o id do registro a ser removido");
             var id = Console.ReadLine();
 
@@ -131,14 +153,18 @@ namespace InserindoERemovendo
             {
                 if(baseDeDados[i, 0] != null && baseDeDados[i, 0] == id)
                 {
-                    baseDeDados[i, 0] = null;
-                    baseDeDados[i, 1] = null;
-                    baseDeDados[i, 2] = null;
+                    //agora trocamos esse valor para um udentificador string com um valor null
+                    baseDeDados[i, 3] = "false";
+                    
+                    //aqui indicamos a data que foi alterado esse registro
+                    baseDeDados[i, 4] = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                    
                 }
             }
             Console.WriteLine("Operação finalizada.");
             Console.WriteLine("Para retornar ao menu inicial apertar qualquer tecla.");
             Console.ReadKey();
+            
         }
         public static void AumentaTamanhoDeLista(ref string[,] ListaDeNome)
         {
@@ -158,7 +184,7 @@ namespace InserindoERemovendo
                 //Criamos um copia da nossa lista para nao perder os valores
                 var listaCopia = ListaDeNome;
                 //Aqui limpamos nossa lista antiga e assinamos novamente com uma lista com mais espaços 
-                ListaDeNome = new string[ListaDeNome.GetLength(0) + 5, 2];
+                ListaDeNome = new string[ListaDeNome.GetLength(0) + 5, 5];
                 //Agora copiamos os registros da nossa lista antiga e passamos para nossa nova lista
                 for (int i = 0; i < listaCopia.GetLength(0); i++)
                 {
@@ -166,7 +192,12 @@ namespace InserindoERemovendo
                     ListaDeNome[i, 0] = listaCopia[i, 0];
                     //Copiamos a informacao do nosso nome
                     ListaDeNome[i, 1] = listaCopia[i, 1];
+                    //a informação da idade foi atualizada
                     ListaDeNome[i, 2] = listaCopia[i, 2];
+                    //identifica se o registro esta ativo
+                    ListaDeNome[i, 3] = listaCopia[i, 3];
+                    //Data de alteração desse registro
+                    ListaDeNome[i, 4] = listaCopia[i, 4];
                 }
                 //Indicamos que nesse ponto a lista foi atualizada em seu tamanho
                 Console.WriteLine("O tamanho da lista foi atualizado:");
