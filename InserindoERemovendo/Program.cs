@@ -52,12 +52,14 @@ namespace InserindoERemovendo
                 {
             Console.Clear();
                     Console.WriteLine("Menu");
-                    Console.WriteLine("1 - Inserir um novo registro.");
-                    Console.WriteLine("2 - Remover um novo registro.");
+                    Console.WriteLine(">> DIGITE O NÚMERO DA OPÇÃO DESEJADA <<");
+                    Console.WriteLine("1 - Inserir um novo registro de livro.");
+                    Console.WriteLine("2 - Remover um novo registro de livro.");
                     Console.WriteLine("3 - Listar informações.");
-                    Console.WriteLine("4 - Sair do sistema.");
+                    Console.WriteLine("4 - Mostrar registros inativos.");
+                    Console.WriteLine("5 - Sir do sistema.");
 
-                    Console.WriteLine("Digite o número da opção desejada");
+            
                     //Retorna diretamente o menu escolhido
                     return Console.ReadLine();
                 }
