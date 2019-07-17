@@ -1,0 +1,25 @@
+TABLE
+
+CREATE TABLE [dbo].[dIARIO1]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Nome] VARCHAR(100) NOT NULL, 
+    [Materia] VARCHAR(50) NOT NULL, 
+    [Nota1] INT NOT NULL,
+	[Nota2] INT NOT NULL,
+	[Nota3] INT NOT NULL,
+	[Nota4] INT NOT NULL,
+	[Nota5] INT NOT NULL,
+	[Nota6] INT NOT NULL,
+)
+
+
+CODIGO
+
+select 
+Nome,
+Materia,
+((Nota1 + Nota2 + Nota3 + Nota4 + Nota5 + Nota6)/ 6) as 'Media',
+IIF (((Nota1 + Nota2 + Nota3 + Nota4 + Nota5 + Nota6)/ 6) >= 7,'Aprovado','Reprovado') as 'Status'
+from dIARIO1
+

@@ -1,0 +1,23 @@
+TABLE
+
+CREATE TABLE [dbo].[Carros]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Ano] INT NOT NULL, 
+    [Modelo] VARCHAR(50) NOT NULL, 
+    [Numero de Vendas] INT NOT NULL, 
+    [Data da Venda] DATE NOT NULL,
+)
+
+
+
+CODIGO
+
+ select  
+	    Ano,
+		Modelo,
+		(SUM([Numero de Vendas]) / COUNT([Numero de Vendas])) as 'Media de vendas',
+		year([Data da Venda]) as 'Ano'
+    from Carros                                     
+	GROUP BY Ano,Modelo,year([Data da Venda])
+	

@@ -1,0 +1,21 @@
+TABLE
+
+CREATE TABLE [dbo].[Diario5]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [Nome] VARCHAR(100) NOT NULL, 
+    [Materia] VARCHAR(50) NOT NULL, 
+    [Nota] INT NOT NULL,
+)
+
+
+CODIGO
+
+select 
+        Nome,
+		Materia,
+		(SUM(Nota) / COUNT(Nota)) as 'Media',
+		COUNT(Nota) as 'Provas'--SUM soma as notas / COUNT pega a quantidade de notas registradas no sistema
+    from Diario5
+	GROUP BY Nome,Materia --Agrupa por nome e materia (se fosse so por nome ele se confundiria)
+	Order by Nome asc -- Ordena por onder alfabetica
