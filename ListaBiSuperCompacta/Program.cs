@@ -1,24 +1,21 @@
-﻿using Operators.MyFirstClass;
+﻿using ListaBiSuperCompacta.BibliotecaListaBi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Operators
+namespace ListaBiSuperCompacta
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var teste = new Carro();
+            var listaBI = new ListaBI();
 
-            teste++;
-
-            teste.MostrarCarro();
+            listaBI.PesquisaLista(Console.ReadLine());
 
             Console.ReadKey();
         }
-   
     }
 }
