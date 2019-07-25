@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletimEsolarComClass", "BoletimEsolarComClass.csproj", "{1999D3D6-CE57-482E-9354-E521E7C26579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestroEscola", "..\GestroEscola\GestroEscola.csproj", "{9B77A9FB-407F-429B-A448-2DE26EAE9E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1999D3D6-CE57-482E-9354-E521E7C26579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1999D3D6-CE57-482E-9354-E521E7C26579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1999D3D6-CE57-482E-9354-E521E7C26579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1999D3D6-CE57-482E-9354-E521E7C26579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B77A9FB-407F-429B-A448-2DE26EAE9E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B77A9FB-407F-429B-A448-2DE26EAE9E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B77A9FB-407F-429B-A448-2DE26EAE9E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B77A9FB-407F-429B-A448-2DE26EAE9E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A06D61AD-9AB8-4EE0-8545-1CA2EDF78FD3}
+	EndGlobalSection
+EndGlobal

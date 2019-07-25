@@ -12,6 +12,7 @@ namespace PrimeiroTesteClass
         static void Main(string[] args)
         {
             var teste = new Compactando();
+
             teste.CarregarLista();
 
             Console.ReadKey();

@@ -14,16 +14,16 @@ namespace ListaBiDeManeiraSimples
                                                                                                              //Criando nossa lista com mais de uma dimensão
             string[,] listaDeNome = new string[5, 2];
 
-                                                                                                          //Aqui com estamos usando apenas uma referencia da nossa lista colocamos ref ao passar ela ao metodo
-            CarregaInformacoesEListaElasNaTela(ref listaDeNome);
+                                                                                                //Aqui com estamos usando apenas uma referencia da nossa lista colocamos ref ao passar ela ao metodo
+            CarregaInformacoesEListaElasNaTela(ref listaDeNome);                               
 
-                                                                                                       //Após carregar as informações e mostrar na tela ele espera um comando
+                                                                                                //Após carregar as informações e mostrar na tela ele espera um comando
             Console.ReadKey();
 
-                                                                                                    //Indicamos que o usuario precisa informar um número de identificação para pesquisar um registro
+                                                                                                //Indicamos que o usuario precisa informar um número de identificação para pesquisar um registro
             Console.WriteLine("Informe o ID do registro a ser pesquisado.");
-                                                                                                  //Aqui como realizamos o registro apenas na chamada
-                                                                                                 //Passamos a nossa lista normalmente pois não iremos alterar e apenas pesquisar o informação
+                                                                                                //Aqui como realizamos o registro apenas na chamada
+                                                                                                //Passamos a nossa lista normalmente pois não iremos alterar e apenas pesquisar o informação
                                                                                                 //Após a virgula temos o console readline que espra nosso identificador unico
             PesquisandoInformacoesNaNossaLista(listaDeNome, Console.ReadLine());
 
@@ -44,8 +44,8 @@ namespace ListaBiDeManeiraSimples
                                                                                                //Carregando o que podemos chamar de ID, identificador do nosso registro unico
                 arrayBi[i, 0] = i.ToString();
                                                                                                //Aqui apenas adicionamos uma informação extra para deixar legal
-                arrayBi[i, 1] = $"Ana_{i}";
-
+                arrayBi[i, 1] = $"Ana";
+          
             }
 
                                                                                                 //Lembrando que GetLngth é um metodo e usamos "(parametro)" com parametro ou as vezes sem 
@@ -55,6 +55,7 @@ namespace ListaBiDeManeiraSimples
 
                                                                                               //Formatamos uma string de maneira que os dados sejam apresentados
                 Console.WriteLine($"ID:{arrayBi[i, 0]} - Nome:{arrayBi[i, 1]}");
+                
             }
             Console.ReadKey();
 
@@ -73,9 +74,9 @@ namespace ListaBiDeManeiraSimples
                 if (arrayBi[i, 0] == pId)
                     {
                                                                                                                     //Mostramos as informações formatadas da nossa pesquisa
-                    Console.WriteLine($"Informação escolhida: Id:{arrayBi[i, 0]} - Nome:{arrayBi[i, 1]}");
-                                                                                                                   //Aqui saimos da nossa lista mas retornamos vazio "return;" pois estamos em um metodo
-                                                                                                                   //vazio "void" que não espera retornar algo.
+                    Console.WriteLine($"Informação escolhida: Id:{arrayBi[i, 0]} - Nome:{arrayBi[i, 1]}");       
+                                                                                                           //Aqui saimos da nossa lista mas retornamos vazio "return;" pois estamos em um metodo
+                                                                                                           //vazio "void" que não espera retornar algo.
                     return;
                 }
             }

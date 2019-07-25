@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrimeiroTesteClass.InformaçoesCompacts
 {
-    class Compactando
+    public class Compactando
     {
         string[] lista;
         public Compactando()

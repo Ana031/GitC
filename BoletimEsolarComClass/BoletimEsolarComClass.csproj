@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE747756-6764-4C80-B037-1F0B135F69DB}</ProjectGuid>
+    <ProjectGuid>{1999D3D6-CE57-482E-9354-E521E7C26579}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>UsandoNossaBibliotecaDeLista</RootNamespace>
-    <AssemblyName>UsandoNossaBibliotecaDeLista</AssemblyName>
+    <RootNamespace>BoletimEsolarComClass</RootNamespace>
+    <AssemblyName>BoletimEsolarComClass</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boletim.cs" />
+    <Compile Include="ListarRegistros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PrimeiroTesteClass\PrimeiroTesteClass.csproj">
-      <Project>{f55fac52-d880-4891-aa12-1fbe99bc903b}</Project>
-      <Name>PrimeiroTesteClass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
