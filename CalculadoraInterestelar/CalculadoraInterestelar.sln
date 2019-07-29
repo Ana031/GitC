@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraInterestelar", "CalculadoraInterestelar.csproj", "{7D30C981-5746-46D7-8BEB-C1FEFB36BCEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsandoCalculadoraInterestelar", "..\UsandoCalculadoraInterestelar\UsandoCalculadoraInterestelar.csproj", "{736B1917-8940-40E3-8E64-AE8E85C617EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D30C981-5746-46D7-8BEB-C1FEFB36BCEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D30C981-5746-46D7-8BEB-C1FEFB36BCEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D30C981-5746-46D7-8BEB-C1FEFB36BCEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D30C981-5746-46D7-8BEB-C1FEFB36BCEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736B1917-8940-40E3-8E64-AE8E85C617EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736B1917-8940-40E3-8E64-AE8E85C617EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736B1917-8940-40E3-8E64-AE8E85C617EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736B1917-8940-40E3-8E64-AE8E85C617EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AFD727C-E9A7-450D-9A7E-680EFB9D4C08}
+	EndGlobalSection
+EndGlobal
