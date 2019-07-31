@@ -21,9 +21,9 @@ namespace CadastroDeLanchesForm
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            novoLanche.Nome = tbxNome.Text;
-            novoLanche.Quantidade = (int)nrQuant.Value;
-            novoLanche.Valor = double.Parse(tbxValor.Text);
+            novoLanche.Modelo = tbxModelo.Text;
+            novoLanche.Ano = (int)nrAno.Value;
+           
 
             this.Close();
         }

@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.nrQuant = new System.Windows.Forms.NumericUpDown();
-            this.tbxNome = new System.Windows.Forms.TextBox();
-            this.lblQuant = new System.Windows.Forms.Label();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.tbxValor = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nrQuant)).BeginInit();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.nrAno = new System.Windows.Forms.NumericUpDown();
+            this.tbxModelo = new System.Windows.Forms.TextBox();
+            this.lblAno = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nrAno)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -43,61 +41,45 @@
             this.btnSalvar.BackColor = System.Drawing.Color.LightCoral;
             this.btnSalvar.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSalvar.Location = new System.Drawing.Point(291, 148);
+            this.btnSalvar.Location = new System.Drawing.Point(272, 135);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(114, 42);
+            this.btnSalvar.Size = new System.Drawing.Size(133, 55);
             this.btnSalvar.TabIndex = 0;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // lblNome
+            // lblModelo
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(12, 17);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(49, 17);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Location = new System.Drawing.Point(12, 17);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(58, 17);
+            this.lblModelo.TabIndex = 1;
+            this.lblModelo.Text = "Modelo:";
             // 
-            // nrQuant
+            // nrAno
             // 
-            this.nrQuant.Location = new System.Drawing.Point(100, 54);
-            this.nrQuant.Name = "nrQuant";
-            this.nrQuant.Size = new System.Drawing.Size(305, 22);
-            this.nrQuant.TabIndex = 2;
+            this.nrAno.Location = new System.Drawing.Point(100, 54);
+            this.nrAno.Name = "nrAno";
+            this.nrAno.Size = new System.Drawing.Size(305, 22);
+            this.nrAno.TabIndex = 2;
             // 
-            // tbxNome
+            // tbxModelo
             // 
-            this.tbxNome.Location = new System.Drawing.Point(100, 12);
-            this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(305, 22);
-            this.tbxNome.TabIndex = 3;
+            this.tbxModelo.Location = new System.Drawing.Point(100, 12);
+            this.tbxModelo.Name = "tbxModelo";
+            this.tbxModelo.Size = new System.Drawing.Size(305, 22);
+            this.tbxModelo.TabIndex = 3;
             // 
-            // lblQuant
+            // lblAno
             // 
-            this.lblQuant.AutoSize = true;
-            this.lblQuant.Location = new System.Drawing.Point(12, 59);
-            this.lblQuant.Name = "lblQuant";
-            this.lblQuant.Size = new System.Drawing.Size(86, 17);
-            this.lblQuant.TabIndex = 4;
-            this.lblQuant.Text = "Quantidade:";
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(12, 100);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(67, 17);
-            this.lblValor.TabIndex = 5;
-            this.lblValor.Text = "Valor R$:";
-            // 
-            // tbxValor
-            // 
-            this.tbxValor.Location = new System.Drawing.Point(100, 95);
-            this.tbxValor.Name = "tbxValor";
-            this.tbxValor.Size = new System.Drawing.Size(305, 22);
-            this.tbxValor.TabIndex = 6;
+            this.lblAno.AutoSize = true;
+            this.lblAno.Location = new System.Drawing.Point(12, 59);
+            this.lblAno.Name = "lblAno";
+            this.lblAno.Size = new System.Drawing.Size(37, 17);
+            this.lblAno.TabIndex = 4;
+            this.lblAno.Text = "Ano:";
             // 
             // TelaDeCadastro
             // 
@@ -105,16 +87,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(476, 245);
-            this.Controls.Add(this.tbxValor);
-            this.Controls.Add(this.lblValor);
-            this.Controls.Add(this.lblQuant);
-            this.Controls.Add(this.tbxNome);
-            this.Controls.Add(this.nrQuant);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.lblAno);
+            this.Controls.Add(this.tbxModelo);
+            this.Controls.Add(this.nrAno);
+            this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.btnSalvar);
             this.Name = "TelaDeCadastro";
             this.Text = "TelaDeCadastro";
-            ((System.ComponentModel.ISupportInitialize)(this.nrQuant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nrAno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,11 +103,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.NumericUpDown nrQuant;
-        private System.Windows.Forms.TextBox tbxNome;
-        private System.Windows.Forms.Label lblQuant;
-        private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.TextBox tbxValor;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.NumericUpDown nrAno;
+        private System.Windows.Forms.TextBox tbxModelo;
+        private System.Windows.Forms.Label lblAno;
     }
 }
