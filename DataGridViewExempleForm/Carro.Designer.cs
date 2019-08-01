@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deletCommand = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +63,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.deletCommand,
+            this.editar,
             this.idDataGridViewTextBoxColumn,
             this.modeloDataGridViewTextBoxColumn,
             this.anoDataGridViewTextBoxColumn,
@@ -88,7 +90,19 @@
             this.deletCommand.MinimumWidth = 6;
             this.deletCommand.Name = "deletCommand";
             this.deletCommand.ReadOnly = true;
+            this.deletCommand.Text = "Deletar";
+            this.deletCommand.UseColumnTextForButtonValue = true;
             this.deletCommand.Width = 125;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.MinimumWidth = 6;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Text = "Editar";
+            this.editar.UseColumnTextForButtonValue = true;
+            this.editar.Width = 125;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -183,7 +197,7 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnAdicionar.BackColor = System.Drawing.Color.Transparent;
             this.btnAdicionar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.Location = new System.Drawing.Point(12, 12);
             this.btnAdicionar.Name = "btnAdicionar";
@@ -195,7 +209,7 @@
             // 
             // btnMarcas
             // 
-            this.btnMarcas.BackColor = System.Drawing.Color.MistyRose;
+            this.btnMarcas.BackColor = System.Drawing.Color.Transparent;
             this.btnMarcas.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcas.Location = new System.Drawing.Point(142, 10);
             this.btnMarcas.Name = "btnMarcas";
@@ -207,7 +221,7 @@
             // 
             // btnVendas
             // 
-            this.btnVendas.BackColor = System.Drawing.Color.MistyRose;
+            this.btnVendas.BackColor = System.Drawing.Color.Transparent;
             this.btnVendas.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendas.Location = new System.Drawing.Point(272, 10);
             this.btnVendas.Name = "btnVendas";
@@ -219,7 +233,7 @@
             // 
             // btnUsuario
             // 
-            this.btnUsuario.BackColor = System.Drawing.Color.MistyRose;
+            this.btnUsuario.BackColor = System.Drawing.Color.Transparent;
             this.btnUsuario.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuario.Location = new System.Drawing.Point(402, 10);
             this.btnUsuario.Name = "btnUsuario";
@@ -235,7 +249,7 @@
             // 
             // btnLixeira
             // 
-            this.btnLixeira.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLixeira.BackColor = System.Drawing.Color.Transparent;
             this.btnLixeira.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLixeira.Location = new System.Drawing.Point(532, 10);
             this.btnLixeira.Name = "btnLixeira";
@@ -247,7 +261,7 @@
             // 
             // btnRestaurar
             // 
-            this.btnRestaurar.BackColor = System.Drawing.Color.MistyRose;
+            this.btnRestaurar.BackColor = System.Drawing.Color.Transparent;
             this.btnRestaurar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestaurar.Location = new System.Drawing.Point(662, 10);
             this.btnRestaurar.Name = "btnRestaurar";
@@ -261,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(959, 535);
             this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.btnLixeira);
             this.Controls.Add(this.btnUsuario);
@@ -283,10 +297,16 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdicionar;
-        private System.Windows.Forms.DataGridViewButtonColumn deletCommand;
         private QuerysInnerJoinDataSet1 querysInnerJoinDataSet1;
         private System.Windows.Forms.BindingSource carrosBindingSource;
         private QuerysInnerJoinDataSet1TableAdapters.CarrosTableAdapter carrosTableAdapter;
+        private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.Button btnVendas;
+        private System.Windows.Forms.Button btnUsuario;
+        private System.Windows.Forms.Button btnLixeira;
+        private System.Windows.Forms.Button btnRestaurar;
+        private System.Windows.Forms.DataGridViewButtonColumn deletCommand;
+        private System.Windows.Forms.DataGridViewButtonColumn editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anoDataGridViewTextBoxColumn;
@@ -296,11 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuAltDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datIncDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datAltDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnMarcas;
-        private System.Windows.Forms.Button btnVendas;
-        private System.Windows.Forms.Button btnUsuario;
-        private System.Windows.Forms.Button btnLixeira;
-        private System.Windows.Forms.Button btnRestaurar;
     }
 }
 

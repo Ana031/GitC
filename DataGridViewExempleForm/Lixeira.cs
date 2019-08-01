@@ -35,13 +35,28 @@ namespace DataGridViewExempleForm
                 switch (lixeiraGlobal.Tabela)
                {
                   
-                   case "carros":
+                case "carros":
                        {
-                       this.carrosTableAdapter1.UpdateQuery(lixeiraGlobal.Id);
-                   }
+                         this.carrosTableAdapter1.UpdateQuery(lixeiraGlobal.Id);
+                       }
                        break;
-          
-               }
+                case "marcas":
+                    {
+                        this.marcasTableAdapter1.UpdateQuery(lixeiraGlobal.Id);
+                    }
+                    break;
+                case "usuarios":
+                    {
+                        this.usuariosTableAdapter1.UpdateQuery(lixeiraGlobal.Id);
+                    }
+                    break;
+                case "vendas":
+                    {
+                        this.vendasTableAdapter1.UpdateQuery(lixeiraGlobal.Id);
+                    }
+                    break;
+
+                }
            this.carrosTableAdapter1.CostumInativeValues(this.querysInnerJoinDataSet1.Carros);
 
         }
