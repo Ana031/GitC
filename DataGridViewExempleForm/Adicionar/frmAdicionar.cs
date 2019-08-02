@@ -18,6 +18,7 @@ namespace DataGridViewExempleForm.Adicionar
             InitializeComponent();
         }
         public Carro_ carrosRow;
+
         private object marcasTableAdapter;
 
         private void FrmAdicionar_Load(object sender, EventArgs e)

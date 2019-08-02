@@ -1,4 +1,5 @@
-﻿using DataGridViewExempleForm.Edicao;
+﻿using DataGridViewExempleForm.Adicionar;
+using DataGridViewExempleForm.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,24 @@ namespace DataGridViewExempleForm
 
            // this.usuariosTableAdapter.DeleteQuery(usuSelect.Id);
             this.usuariosTableAdapter.CustumQuery(querysInnerJoinDataSet1.Usuarios);
+        }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            frmAdicionarUsuarios formAddUsu = new frmAdicionarUsuarios();
+            formAddUsu.ShowDialog();
+
+            if (!string.IsNullOrEmpty(formAddUsu.usuariosRow?.Usuario))
+
+                this.usuariosTableAdapter.Insert(
+                    formAddUsu.usuariosRow.Usuario,
+                    true,
+                    1,
+                    1,
+                    DateTime.Now,
+                    DateTime.Now
+                );
+            this.usuariosTableAdapter.Fill(this.querysInnerJoinDataSet1.Usuarios);
         }
     }
 }

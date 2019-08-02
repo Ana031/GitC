@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Marcas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DeletComand = new System.Windows.Forms.DataGridViewButtonColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -53,6 +54,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SandyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DeletComand,
@@ -65,7 +67,7 @@
             this.datIncDataGridViewTextBoxColumn,
             this.datAltDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.marcasBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -170,13 +172,16 @@
             // btnAdicionar
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdicionar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(12, 12);
+            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAdicionar.Location = new System.Drawing.Point(33, 24);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(776, 68);
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // marcasTableAdapter
             // 
@@ -186,9 +191,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(841, 483);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dataGridView1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Marcas";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

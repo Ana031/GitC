@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DeletCommand = new System.Windows.Forms.DataGridViewButtonColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -53,6 +54,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SandyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DeletCommand,
@@ -170,6 +172,7 @@
             // btnAdicionar
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdicionar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.Location = new System.Drawing.Point(12, 15);
             this.btnAdicionar.Name = "btnAdicionar";
@@ -177,6 +180,7 @@
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // usuariosTableAdapter
             // 
@@ -186,6 +190,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dataGridView1);

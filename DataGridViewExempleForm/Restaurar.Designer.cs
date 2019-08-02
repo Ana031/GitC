@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restaurar));
             this.carrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
             this.carrosTableAdapter = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.CarrosTableAdapter();
+            this.carrosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,16 +45,39 @@
             this.datIncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datAltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deletCommandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
+            this.restaurarCommandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // carrosBindingSource
+            // 
+            this.carrosBindingSource.DataMember = "Carros";
+            this.carrosBindingSource.DataSource = this.querysInnerJoinDataSet1;
+            // 
+            // querysInnerJoinDataSet1
+            // 
+            this.querysInnerJoinDataSet1.DataSetName = "QuerysInnerJoinDataSet1";
+            this.querysInnerJoinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // carrosTableAdapter
+            // 
+            this.carrosTableAdapter.ClearBeforeFill = true;
+            // 
+            // carrosBindingSource1
+            // 
+            this.carrosBindingSource1.DataMember = "Carros";
+            this.carrosBindingSource1.DataSource = this.querysInnerJoinDataSet1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SandyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -64,31 +89,17 @@
             this.usuAltDataGridViewTextBoxColumn,
             this.datIncDataGridViewTextBoxColumn,
             this.datAltDataGridViewTextBoxColumn,
-            this.deletCommandDataGridViewTextBoxColumn});
+            this.deletCommandDataGridViewTextBoxColumn,
+            this.restaurarCommandDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.carrosBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(95, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(674, 349);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // querysInnerJoinDataSet1
-            // 
-            this.querysInnerJoinDataSet1.DataSetName = "QuerysInnerJoinDataSet1";
-            this.querysInnerJoinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carrosBindingSource
-            // 
-            this.carrosBindingSource.DataMember = "Carros";
-            this.carrosBindingSource.DataSource = this.querysInnerJoinDataSet1;
-            // 
-            // carrosTableAdapter
-            // 
-            this.carrosTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -180,28 +191,51 @@
             this.deletCommandDataGridViewTextBoxColumn.ReadOnly = true;
             this.deletCommandDataGridViewTextBoxColumn.Width = 125;
             // 
+            // restaurarCommandDataGridViewTextBoxColumn
+            // 
+            this.restaurarCommandDataGridViewTextBoxColumn.DataPropertyName = "RestaurarCommand";
+            this.restaurarCommandDataGridViewTextBoxColumn.HeaderText = "RestaurarCommand";
+            this.restaurarCommandDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.restaurarCommandDataGridViewTextBoxColumn.Name = "restaurarCommandDataGridViewTextBoxColumn";
+            this.restaurarCommandDataGridViewTextBoxColumn.ReadOnly = true;
+            this.restaurarCommandDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(95, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 46);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Restaurar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(853, 496);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Restaurar";
             this.Text = "Restaurar";
             this.Load += new System.EventHandler(this.Restaurar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private QuerysInnerJoinDataSet1 querysInnerJoinDataSet1;
         private System.Windows.Forms.BindingSource carrosBindingSource;
         private QuerysInnerJoinDataSet1TableAdapters.CarrosTableAdapter carrosTableAdapter;
+        private System.Windows.Forms.BindingSource carrosBindingSource1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anoDataGridViewTextBoxColumn;
@@ -212,5 +246,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datIncDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datAltDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deletCommandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn restaurarCommandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

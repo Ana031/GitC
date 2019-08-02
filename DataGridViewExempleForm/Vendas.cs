@@ -1,4 +1,5 @@
-﻿using DataGridViewExempleForm.Edicao;
+﻿using DataGridViewExempleForm.Adicionar;
+using DataGridViewExempleForm.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,26 @@ namespace DataGridViewExempleForm
 
            // this.vendasTableAdapter.DeleteQuery(venSelect.Id);
             this.vendasTableAdapter.CustomQuery(querysInnerJoinDataSet1.Vendas);
+        }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            frmAdicionarVendas formAddVendas = new frmAdicionarVendas();
+            formAddVendas.ShowDialog();
+
+            if (formAddVendas.vendasRow?.Carro > 0 && formAddVendas.vendasRow?.Valor > 0)
+
+            this.vendasTableAdapter.Insert(
+                formAddVendas.vendasRow.Carro,
+                formAddVendas.vendasRow.Quantidade,
+                formAddVendas.vendasRow.Valor,
+                true,
+                1,
+                1,
+                DateTime.Now,
+                DateTime.Now
+            );
+            this.vendasTableAdapter.CustomQuery(this.querysInnerJoinDataSet1.Vendas);
         }
     }
 }

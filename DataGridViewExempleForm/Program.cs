@@ -16,7 +16,7 @@ namespace DataGridViewExempleForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Carro());
+            Application.Run(new frmInicio());
         }
     }
 }

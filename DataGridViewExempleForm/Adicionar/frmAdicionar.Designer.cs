@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdicionar));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
             this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
+            this.button1 = new System.Windows.Forms.Button();
             this.marcasTableAdapter1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.MarcasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(36, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
@@ -55,6 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(36, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 17);
@@ -64,6 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(36, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
@@ -95,25 +99,27 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.ValueMember = "Id";
             // 
-            // button1
+            // marcasBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(213, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 45);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.marcasBindingSource.DataMember = "Marcas";
+            this.marcasBindingSource.DataSource = this.querysInnerJoinDataSet1;
             // 
             // querysInnerJoinDataSet1
             // 
             this.querysInnerJoinDataSet1.DataSetName = "QuerysInnerJoinDataSet1";
             this.querysInnerJoinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // marcasBindingSource
+            // button1
             // 
-            this.marcasBindingSource.DataMember = "Marcas";
-            this.marcasBindingSource.DataSource = this.querysInnerJoinDataSet1;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(213, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 45);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Adicionar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // marcasTableAdapter1
             // 
@@ -123,7 +129,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(403, 270);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -134,8 +142,8 @@
             this.Name = "frmAdicionar";
             this.Text = "frmAdicionar";
             this.Load += new System.EventHandler(this.FrmAdicionar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

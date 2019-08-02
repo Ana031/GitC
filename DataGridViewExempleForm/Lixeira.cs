@@ -58,6 +58,7 @@ namespace DataGridViewExempleForm
 
                 }
            this.carrosTableAdapter1.CostumInativeValues(this.querysInnerJoinDataSet1.Carros);
+            this.dataTable1TableAdapter.GetAllData(this.querysInnerJoinDataSet1.DataTable1);
 
         }
     }

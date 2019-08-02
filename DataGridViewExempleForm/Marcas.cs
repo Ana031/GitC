@@ -1,4 +1,5 @@
-﻿using DataGridViewExempleForm.Edicao;
+﻿using DataGridViewExempleForm.Adicionar;
+using DataGridViewExempleForm.Edicao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace DataGridViewExempleForm
         {
             InitializeComponent();
         }
-
+        
         private void Form2_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'querysInnerJoinDataSet1.Marcas'. Você pode movê-la ou removê-la conforme necessário.
@@ -53,6 +54,24 @@ namespace DataGridViewExempleForm
 
             //this.marcasTableAdapter.DeleteQuery(marSelect.Id);
             this.marcasTableAdapter.CustomQuery(querysInnerJoinDataSet1.Marcas);
+        }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            frmAdicionarMarcas formAddMarcas = new frmAdicionarMarcas();
+            formAddMarcas.ShowDialog();
+
+            if (!string.IsNullOrEmpty(formAddMarcas.marcasRow?.Nome))
+
+                this.marcasTableAdapter.Insert(
+                formAddMarcas.marcasRow.Nome,
+                true,
+                1,
+                1,
+                DateTime.Now,
+                DateTime.Now
+            );
+            this.marcasTableAdapter.CustomQuery(this.querysInnerJoinDataSet1.Marcas);
         }
     }
 }

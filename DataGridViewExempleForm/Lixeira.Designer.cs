@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.RestaurarCommand = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.DataTable1TableAdapter();
             this.tabelaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RestaurarCommand2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.querysInnerJoinDataSet1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1();
+            this.dataTable1TableAdapter = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.DataTable1TableAdapter();
             this.carrosTableAdapter1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.CarrosTableAdapter();
             this.marcasTableAdapter1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.MarcasTableAdapter();
             this.vendasTableAdapter1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.VendasTableAdapter();
             this.usuariosTableAdapter1 = new DataGridViewExempleForm.QuerysInnerJoinDataSet1TableAdapters.UsuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,6 +51,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SandyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RestaurarCommand,
@@ -64,7 +65,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(758, 411);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
@@ -76,20 +77,6 @@
             this.RestaurarCommand.Name = "RestaurarCommand";
             this.RestaurarCommand.ReadOnly = true;
             this.RestaurarCommand.Width = 125;
-            // 
-            // querysInnerJoinDataSet1
-            // 
-            this.querysInnerJoinDataSet1.DataSetName = "QuerysInnerJoinDataSet1";
-            this.querysInnerJoinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.querysInnerJoinDataSet1;
-            // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
             // tabelaDataGridViewTextBoxColumn
             // 
@@ -118,6 +105,20 @@
             this.RestaurarCommand2.ReadOnly = true;
             this.RestaurarCommand2.Width = 125;
             // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.querysInnerJoinDataSet1;
+            // 
+            // querysInnerJoinDataSet1
+            // 
+            this.querysInnerJoinDataSet1.DataSetName = "QuerysInnerJoinDataSet1";
+            this.querysInnerJoinDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
             // carrosTableAdapter1
             // 
             this.carrosTableAdapter1.ClearBeforeFill = true;
@@ -138,14 +139,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(758, 411);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Lixeira";
             this.Text = "Lixeira";
             this.Load += new System.EventHandler(this.Lixeira_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
