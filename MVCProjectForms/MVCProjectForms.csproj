@@ -46,6 +46,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar\frmAdicionarEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarEditoras.Designer.cs">
+      <DependentUpon>frmAdicionarEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarGeneros.Designer.cs">
+      <DependentUpon>frmAdicionarGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarLivros.Designer.cs">
+      <DependentUpon>frmAdicionarLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarLocacao.Designer.cs">
+      <DependentUpon>frmAdicionarLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarUsuarios.Designer.cs">
+      <DependentUpon>frmAdicionarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicionar\frmAdiconarAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdiconarAutores.Designer.cs">
+      <DependentUpon>frmAdiconarAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoAutores.Designer.cs">
+      <DependentUpon>frmEdicaoAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoEditoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoEditoras.Designer.cs">
+      <DependentUpon>frmEdicaoEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoGeneros.Designer.cs">
+      <DependentUpon>frmEdicaoGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoLivros.Designer.cs">
+      <DependentUpon>frmEdicaoLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoLocacao.Designer.cs">
+      <DependentUpon>frmEdicaoLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\frmEdicaoUsuarios.Designer.cs">
+      <DependentUpon>frmEdicaoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +175,54 @@
     <Compile Include="View\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmTelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmTelaLogin.Designer.cs">
+      <DependentUpon>frmTelaLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Adicionar\frmAdicionarEditoras.resx">
+      <DependentUpon>frmAdicionarEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdicionarGeneros.resx">
+      <DependentUpon>frmAdicionarGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdicionarLivros.resx">
+      <DependentUpon>frmAdicionarLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdicionarLocacao.resx">
+      <DependentUpon>frmAdicionarLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdicionarUsuarios.resx">
+      <DependentUpon>frmAdicionarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdiconarAutores.resx">
+      <DependentUpon>frmAdiconarAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoAutores.resx">
+      <DependentUpon>frmEdicaoAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoEditoras.resx">
+      <DependentUpon>frmEdicaoEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoGeneros.resx">
+      <DependentUpon>frmEdicaoGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoLivros.resx">
+      <DependentUpon>frmEdicaoLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoLocacao.resx">
+      <DependentUpon>frmEdicaoLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\frmEdicaoUsuarios.resx">
+      <DependentUpon>frmEdicaoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmTelaLogin.resx">
+      <DependentUpon>frmTelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

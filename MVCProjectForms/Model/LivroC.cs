@@ -10,6 +10,7 @@ namespace MVCProjectForms.Model
     {
         public int Id { get; set; }
         public int Registro { get; set; }
+        public string Titulo { get; set; }
         public string ISBN { get; set; }
         public int Genero { get; set; }
         public int Editora { get; set; }
