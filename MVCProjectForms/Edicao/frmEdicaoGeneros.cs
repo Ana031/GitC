@@ -29,8 +29,6 @@ namespace MVCProjectForms.Edicao
         {
             tbxTipo.Text = GenerosRow.Tipo;
             tbxDescricao.Text = GenerosRow.Descricao;
-
-            this.Close();
         }
     }
 }

@@ -50,16 +50,19 @@ namespace MVCProjectForms.View
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var livSelect = ((System.Data.DataRowView)
-                this.dataGridView1.Rows[e.ColumnIndex].DataBoundItem).Row
-                as MVCProjectForms.SistemaBibliotecaDBDataSet.LivroRow;
 
+            var livSelect = ((System.Data.DataRowView)
+                  this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row 
+                  as MVCProjectForms.SistemaBibliotecaDBDataSet.LivroRow;
+        
             switch (e.ColumnIndex)
             {
                 case 0:
                     {
                         this.livroTableAdapter.DeleteQuery(livSelect.Id);
-                    }break;
+                        
+                    }
+                    break;
                 case 1:
                     {
                         frmEdicaoLivros editLivros = new frmEdicaoLivros();
@@ -68,9 +71,9 @@ namespace MVCProjectForms.View
 
                         this.livroTableAdapter.Update(editLivros.LivroRow);
                     }break;
-                  
+                   
             }
-            this.livroTableAdapter.CustomQuery(sistemaBibliotecaDBDataSet.Livro);
+            this.livroTableAdapter.Fill(sistemaBibliotecaDBDataSet.Livro);
         }
     }
 }

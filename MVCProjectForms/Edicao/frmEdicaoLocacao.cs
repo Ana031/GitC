@@ -20,10 +20,11 @@ namespace MVCProjectForms.Edicao
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            LocacaoRow.Livro = Convert.ToInt32(tbxLivro.Text);
-            LocacaoRow.Usuario = Convert.ToInt32(tbxUsuario.Text);
-            LocacaoRow.Tipo = Convert.ToInt32(tbxTipo);
-            LocacaoRow.Devolucao = Convert.ToDateTime(tbxDevolução);
+
+            LocacaoRow.Livro =   (int)cbxLivro.SelectedValue;
+            LocacaoRow.Usuario = (int)cbxUsuario.SelectedValue;
+            LocacaoRow.Tipo =         Convert.ToInt32(tbxTipo.Text);
+            LocacaoRow.Devolucao =    dateTimePicker1.Value;
 
             this.Close();
         }
@@ -31,12 +32,12 @@ namespace MVCProjectForms.Edicao
         private void FrmEdicaoLocacao_Load(object sender, EventArgs e)
         {
             
-            tbxLivro.Text = Convert.ToString(LocacaoRow.Livro);
-            tbxUsuario.Text = Convert.ToString(LocacaoRow.Usuario);
-            tbxTipo.Text = Convert.ToString(LocacaoRow.Tipo);
-            tbxDevolução.Text = Convert.ToString(LocacaoRow.Devolucao);
+            cbxLivro.SelectedValue  = LocacaoRow.Livro;
+            cbxUsuario.SelectedValue  = LocacaoRow.Usuario;
+            tbxTipo.Text   = LocacaoRow.Tipo.ToString();
+            dateTimePicker1.Value       = LocacaoRow.Devolucao;
 
-            this.Close();
+          
 
         }
     }

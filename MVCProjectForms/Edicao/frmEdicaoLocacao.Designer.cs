@@ -28,105 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblLivro = new System.Windows.Forms.Label();
-            this.tbxLivro = new System.Windows.Forms.TextBox();
-            this.tbxUsuario = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbxUsuario = new System.Windows.Forms.ComboBox();
+            this.cbxLivro = new System.Windows.Forms.ComboBox();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.lblDevolucao = new System.Windows.Forms.Label();
             this.tbxTipo = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.tbxDevolução = new System.Windows.Forms.TextBox();
-            this.lblDevolucao = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblLivro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblLivro
+            // dateTimePicker1
             // 
-            this.lblLivro.AutoSize = true;
-            this.lblLivro.Location = new System.Drawing.Point(12, 9);
-            this.lblLivro.Name = "lblLivro";
-            this.lblLivro.Size = new System.Drawing.Size(33, 13);
-            this.lblLivro.TabIndex = 0;
-            this.lblLivro.Text = "Livro:";
+            this.dateTimePicker1.Location = new System.Drawing.Point(101, 112);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 29;
             // 
-            // tbxLivro
+            // cbxUsuario
             // 
-            this.tbxLivro.Location = new System.Drawing.Point(80, 6);
-            this.tbxLivro.Name = "tbxLivro";
-            this.tbxLivro.Size = new System.Drawing.Size(144, 20);
-            this.tbxLivro.TabIndex = 1;
+            this.cbxUsuario.DisplayMember = "Nome";
+            this.cbxUsuario.FormattingEnabled = true;
+            this.cbxUsuario.Location = new System.Drawing.Point(105, 48);
+            this.cbxUsuario.Name = "cbxUsuario";
+            this.cbxUsuario.Size = new System.Drawing.Size(192, 24);
+            this.cbxUsuario.TabIndex = 28;
+            this.cbxUsuario.ValueMember = "Id";
             // 
-            // tbxUsuario
+            // cbxLivro
             // 
-            this.tbxUsuario.Location = new System.Drawing.Point(80, 32);
-            this.tbxUsuario.Name = "tbxUsuario";
-            this.tbxUsuario.Size = new System.Drawing.Size(144, 20);
-            this.tbxUsuario.TabIndex = 3;
+            this.cbxLivro.DisplayMember = "Titulo";
+            this.cbxLivro.FormattingEnabled = true;
+            this.cbxLivro.Location = new System.Drawing.Point(105, 12);
+            this.cbxLivro.Name = "cbxLivro";
+            this.cbxLivro.Size = new System.Drawing.Size(192, 24);
+            this.cbxLivro.TabIndex = 27;
+            this.cbxLivro.ValueMember = "Id";
             // 
-            // lblUsuario
+            // btnAdicionar
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 35);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 2;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // tbxTipo
-            // 
-            this.tbxTipo.Location = new System.Drawing.Point(80, 58);
-            this.tbxTipo.Name = "tbxTipo";
-            this.tbxTipo.Size = new System.Drawing.Size(144, 20);
-            this.tbxTipo.TabIndex = 5;
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(12, 61);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(31, 13);
-            this.lblTipo.TabIndex = 4;
-            this.lblTipo.Text = "Tipo:";
-            // 
-            // tbxDevolução
-            // 
-            this.tbxDevolução.Location = new System.Drawing.Point(80, 84);
-            this.tbxDevolução.Name = "tbxDevolução";
-            this.tbxDevolução.Size = new System.Drawing.Size(144, 20);
-            this.tbxDevolução.TabIndex = 7;
+            this.btnAdicionar.Location = new System.Drawing.Point(197, 175);
+            this.btnAdicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(100, 28);
+            this.btnAdicionar.TabIndex = 26;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
             // lblDevolucao
             // 
             this.lblDevolucao.AutoSize = true;
-            this.lblDevolucao.Location = new System.Drawing.Point(12, 87);
+            this.lblDevolucao.Location = new System.Drawing.Point(14, 112);
+            this.lblDevolucao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDevolucao.Name = "lblDevolucao";
-            this.lblDevolucao.Size = new System.Drawing.Size(62, 13);
-            this.lblDevolucao.TabIndex = 6;
+            this.lblDevolucao.Size = new System.Drawing.Size(79, 17);
+            this.lblDevolucao.TabIndex = 25;
             this.lblDevolucao.Text = "Devolução:";
             // 
-            // btnSalvar
+            // tbxTipo
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(149, 138);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 8;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.Button1_Click);
+            this.tbxTipo.Location = new System.Drawing.Point(105, 76);
+            this.tbxTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxTipo.Name = "tbxTipo";
+            this.tbxTipo.Size = new System.Drawing.Size(191, 22);
+            this.tbxTipo.TabIndex = 24;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(14, 80);
+            this.lblTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(40, 17);
+            this.lblTipo.TabIndex = 23;
+            this.lblTipo.Text = "Tipo:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(14, 48);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(61, 17);
+            this.lblUsuario.TabIndex = 22;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // lblLivro
+            // 
+            this.lblLivro.AutoSize = true;
+            this.lblLivro.Location = new System.Drawing.Point(14, 16);
+            this.lblLivro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLivro.Name = "lblLivro";
+            this.lblLivro.Size = new System.Drawing.Size(43, 17);
+            this.lblLivro.TabIndex = 21;
+            this.lblLivro.Text = "Livro:";
             // 
             // frmEdicaoLocacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 287);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.tbxDevolução);
+            this.ClientSize = new System.Drawing.Size(728, 353);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbxUsuario);
+            this.Controls.Add(this.cbxLivro);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.lblDevolucao);
             this.Controls.Add(this.tbxTipo);
             this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.tbxUsuario);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.tbxLivro);
             this.Controls.Add(this.lblLivro);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEdicaoLocacao";
             this.Text = "frmEdicaoLocacao";
             this.Load += new System.EventHandler(this.FrmEdicaoLocacao_Load);
@@ -137,14 +149,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblLivro;
-        private System.Windows.Forms.TextBox tbxLivro;
-        private System.Windows.Forms.TextBox tbxUsuario;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbxUsuario;
+        private System.Windows.Forms.ComboBox cbxLivro;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Label lblDevolucao;
         private System.Windows.Forms.TextBox tbxTipo;
         private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.TextBox tbxDevolução;
-        private System.Windows.Forms.Label lblDevolucao;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblLivro;
     }
 }

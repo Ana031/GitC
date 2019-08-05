@@ -31,7 +31,9 @@ namespace MVCProjectForms.View
             frmAdicionarLocacao addLocacao = new frmAdicionarLocacao();
             addLocacao.ShowDialog();
 
-            this.locacaoTableAdapter.Insert(
+            //if (!string.IsNullOrEmpty(addLocacao.locacaoRow?.Livro))
+
+                this.locacaoTableAdapter.Insert(
                 addLocacao.locacaoRow.Livro,
                 addLocacao.locacaoRow.Usuario,
                 addLocacao.locacaoRow.Tipo,
@@ -47,9 +49,13 @@ namespace MVCProjectForms.View
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             var locSelect = ((System.Data.DataRowView)
-                this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row
-                as MVCProjectForms.SistemaBibliotecaDBDataSet.LocacaoRow;
+                  this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row
+                  as MVCProjectForms.SistemaBibliotecaDBDataSet.LocacaoRow;
+            //var locSelect = ((System.Data.DataRowView)
+            //    this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row
+            //    as MVCProjectForms.SistemaBibliotecaDBDataSet.LocacaoRow;
 
             switch (e.ColumnIndex)
             {
@@ -65,7 +71,7 @@ namespace MVCProjectForms.View
 
                         this.locacaoTableAdapter.Update(editLocacao.LocacaoRow);
                     }break;
-            }
+            } this.locacaoTableAdapter.Fill(sistemaBibliotecaDBDataSet.Locacao);
         }
     }
 }

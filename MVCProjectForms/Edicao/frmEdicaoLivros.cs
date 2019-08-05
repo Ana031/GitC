@@ -16,7 +16,9 @@ namespace MVCProjectForms.Edicao
         {
             InitializeComponent();
         }
+
         public MVCProjectForms.SistemaBibliotecaDBDataSet.LivroRow LivroRow;
+
         private void TbxLivro_TextChanged(object sender, EventArgs e)
         {
 
@@ -44,11 +46,11 @@ namespace MVCProjectForms.Edicao
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            LivroRow.Registro = Convert.ToInt32(tbxRegistro.Text);
+            LivroRow.Registro = (int)numericUpDown1.Value;
             LivroRow.Titulo = tbxTitulo.Text;
             LivroRow.ISBN = tbxISBN.Text;
-            LivroRow.Genero = comboBox1.SelectedIndex;
-            LivroRow.Editora = comboBox2.SelectedIndex;
+            LivroRow.Genero = (int)comboBox1.SelectedValue;
+            LivroRow.Editora = (int)comboBox2.SelectedValue;
             LivroRow.Sinopse = tbxSinopse.Text;
             LivroRow.Observacoes = tbxObs.Text;
 
@@ -58,7 +60,14 @@ namespace MVCProjectForms.Edicao
 
         private void FrmEdicaoLivros_Load(object sender, EventArgs e)
         {
-            tbxRegistro.Text = Convert.ToString(LivroRow.Registro);
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Editoras'. Você pode movê-la ou removê-la conforme necessário.
+            this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Generos'. Você pode movê-la ou removê-la conforme necessário.
+            this.generosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Generos);
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Livro'. Você pode movê-la ou removê-la conforme necessário.
+            this.livroTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Livro);
+
+            numericUpDown1.Value = LivroRow.Registro;
             tbxTitulo.Text = LivroRow.Titulo;
             tbxISBN.Text = LivroRow.ISBN;
             comboBox1.SelectedItem = LivroRow.Genero;
@@ -66,7 +75,7 @@ namespace MVCProjectForms.Edicao
             tbxSinopse.Text = LivroRow.Sinopse;
             tbxObs.Text = LivroRow.Observacoes;
 
-            this.Close();
+            
         }
     }
 }

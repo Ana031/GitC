@@ -48,12 +48,18 @@ namespace MVCProjectForms.Adicionar
                 Nome = tbxNome.Text,
                 Email = tbxEmail.Text,
                 Senha = tbxSenha.Text,
+                Login = textBox1.Text,
             };
 
             this.Close();
         }
 
         private void FrmAdicionarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -23,7 +23,7 @@ namespace MVCProjectForms.Edicao
             tbxEmail.Text = UsuariosRow.Email;
             tbxSenha.Text = UsuariosRow.Senha;
 
-            this.Close();
+           
         }
 
         private void Button1_Click(object sender, EventArgs e)

@@ -131,6 +131,7 @@
     <Compile Include="Model\LivroAutor.cs" />
     <Compile Include="Model\LivroC.cs" />
     <Compile Include="Model\LocacaoC.cs" />
+    <Compile Include="Model\Session.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

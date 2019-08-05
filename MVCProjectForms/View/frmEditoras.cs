@@ -48,7 +48,7 @@ namespace MVCProjectForms.View
             {
                 case 0:
                     {
-                       // this.editorasTableAdapter.DeleteQuery(ediSelect.Id);
+                        this.editorasTableAdapter.DeleteQuery(ediSelect.Id);
                     }break;
                 case 1:
                     {

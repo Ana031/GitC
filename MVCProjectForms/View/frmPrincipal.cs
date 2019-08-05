@@ -1,4 +1,5 @@
 ﻿using MVCProjectForms.Adicionar;
+using MVCProjectForms.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,42 +17,45 @@ namespace MVCProjectForms.View
         public frmPrincipal()
         {
             InitializeComponent();
+
+            if (Session.user == null)
+                throw new Exception("Erro Critico de Sistma!");
         }
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdicionarUsuarios addUsuarios = new frmAdicionarUsuarios();
-            addUsuarios.ShowDialog();
+            frmUsuarios Usuarios = new frmUsuarios();
+            Usuarios.ShowDialog();
         }
 
         private void LocaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdicionarLocacao addLocacao = new frmAdicionarLocacao();
-            addLocacao.ShowDialog();
+            frmLocacao Locacao = new frmLocacao();
+            Locacao.ShowDialog();
         }
 
         private void EditorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdicionarEditoras addEditoras = new frmAdicionarEditoras();
-            addEditoras.ShowDialog();
+            frmEditoras Editoras = new frmEditoras();
+            Editoras.ShowDialog();
         }
 
         private void LivrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdicionarLivros addLivros = new frmAdicionarLivros();
-            addLivros.ShowDialog();
+            frmLivros Livros = new frmLivros();
+            Livros.ShowDialog();
         }
 
         private void GenerosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdicionarGeneros addGeneros = new frmAdicionarGeneros();
-            addGeneros.ShowDialog();
+            frmGeneros Generos = new frmGeneros();
+            Generos.ShowDialog();
         }
 
         private void AutoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdiconarAutores addAutores = new frmAdiconarAutores();
-            addAutores.ShowDialog();
+            frmAutores Autores = new frmAutores();
+            Autores.ShowDialog();
         }
     }
 }

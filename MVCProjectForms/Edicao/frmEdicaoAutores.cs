@@ -30,7 +30,6 @@ namespace MVCProjectForms.Edicao
             tbxNome.Text = AutoresRow.Nome;
             tbxDescricao.Text = AutoresRow.Descricao;
 
-            this.Close();
         }
     }
 }

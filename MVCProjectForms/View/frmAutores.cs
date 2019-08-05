@@ -44,11 +44,11 @@ namespace MVCProjectForms.View
                    this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row
                    as MVCProjectForms.SistemaBibliotecaDBDataSet.AutoresRow;
 
-            switch(e.RowIndex)
+            switch(e.ColumnIndex)
             {
                 case 0:
                     {
-                        //this.autoresTableAdapter.DeleteQuery(AutSelect.Id);
+                        this.autoresTableAdapter.DeleteQuery1(AutSelect.Id);
                     }break;
                 case 1:
                     {

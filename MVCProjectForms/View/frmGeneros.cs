@@ -14,6 +14,7 @@ namespace MVCProjectForms.View
 {
     public partial class frmGeneros : Form
     {
+
         public frmGeneros()
         {
             InitializeComponent();
@@ -48,7 +49,7 @@ namespace MVCProjectForms.View
             {
                 case 0:
                     {
-                        //this.generosTableAdapter.DeleteQuery(genSelect.Id);
+                        this.generosTableAdapter.DeleteQuery(genSelect.Id);
                     }break;
                 case 1:
                     {
@@ -59,6 +60,7 @@ namespace MVCProjectForms.View
                         this.generosTableAdapter.Update(editGeneros.GenerosRow);
                     }break;
             }
+            this.generosTableAdapter.Fill(sistemaBibliotecaDBDataSet.Generos);
         }
     }
 }

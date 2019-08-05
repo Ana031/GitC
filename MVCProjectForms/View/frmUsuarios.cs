@@ -1,5 +1,6 @@
 ﻿using MVCProjectForms.Adicionar;
 using MVCProjectForms.Edicao;
+using MVCProjectForms.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace MVCProjectForms.View
         {
             InitializeComponent();
         }
+
+        public Usuario usuarioRow;
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
@@ -65,11 +68,13 @@ namespace MVCProjectForms.View
                         frmEdicaoUsuarios editUsuario = new frmEdicaoUsuarios();
                         editUsuario.UsuariosRow = usuSelect;
                         editUsuario.ShowDialog();
+
+                        this.usuariosTableAdapter.Update(editUsuario.UsuariosRow);
                     }
                     break;
             }
-            this.usuariosTableAdapter.DeleteQuery(usuSelect.Id);
-           // this.usuariosTableAdapter.CustomQuery(SistemaBibliotecaDBDataSet.Usuarios);
+            //this.usuariosTableAdapter.DeleteQuery(usuSelect.Id);
+            this.usuariosTableAdapter.Fill(sistemaBibliotecaDBDataSet.Usuarios);
         }
     }
 }

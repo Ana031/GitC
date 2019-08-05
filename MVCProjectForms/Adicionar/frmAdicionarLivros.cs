@@ -21,16 +21,28 @@ namespace MVCProjectForms.Adicionar
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            livrosRow = new LivroC
+            livrosRow = new LivroC()
             {
-                Registro = Convert.ToInt32(tbxRegistro.Text),
+                Registro = (int)numericUpDown1.Value,
                 Titulo = tbxTitulo.Text,
                 ISBN = tbxISBN.Text,
-                Genero = Convert.ToInt32(tbxGenero.Text),
-                Editora = Convert.ToInt32(tbxEditora.Text),
+                Genero = (int)comboBox1.SelectedValue,
+                Editora = (int)comboBox2.SelectedValue,
                 Sinopse = tbxSinopse.Text,
-                Observacoes = tbxSinopse.Text,
+                Observacoes = tbxObs.Text,
+                
+
             };
+            this.Close();
+        }
+
+        private void FrmAdicionarLivros_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Editoras'. Você pode movê-la ou removê-la conforme necessário.
+            this.editorasTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Editoras);
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Generos'. Você pode movê-la ou removê-la conforme necessário.
+            this.generosTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Generos);
+
         }
     }
 }
