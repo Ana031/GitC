@@ -58,6 +58,12 @@
     <Compile Include="Adicionar\frmAdicionarGeneros.Designer.cs">
       <DependentUpon>frmAdicionarGeneros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Adicionar\frmAdicionarLivroAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar\frmAdicionarLivroAutor.Designer.cs">
+      <DependentUpon>frmAdicionarLivroAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicionar\frmAdicionarLivros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivroAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivroAutor.Designer.cs">
+      <DependentUpon>LivroAutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Autor.cs" />
     <Compile Include="Model\Editora.cs" />
@@ -194,6 +206,9 @@
     <EmbeddedResource Include="Adicionar\frmAdicionarGeneros.resx">
       <DependentUpon>frmAdicionarGeneros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Adicionar\frmAdicionarLivroAutor.resx">
+      <DependentUpon>frmAdicionarLivroAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adicionar\frmAdicionarLivros.resx">
       <DependentUpon>frmAdicionarLivros.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivroAutor.resx">
+      <DependentUpon>LivroAutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

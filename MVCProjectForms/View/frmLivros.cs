@@ -21,6 +21,8 @@ namespace MVCProjectForms.View
 
         private void FrmLivros_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet2.Livro'. Você pode movê-la ou removê-la conforme necessário.
+            this.livroTableAdapter.Fill(this.sistemaBibliotecaDBDataSet2.Livro);
             // TODO: esta linha de código carrega dados na tabela 'sistemaBibliotecaDBDataSet.Livro'. Você pode movê-la ou removê-la conforme necessário.
             this.livroTableAdapter.Fill(this.sistemaBibliotecaDBDataSet.Livro);
 
@@ -52,26 +54,37 @@ namespace MVCProjectForms.View
         {
 
             var livSelect = ((System.Data.DataRowView)
-                  this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row 
+                  this.dataGridView1.Rows[e.RowIndex].DataBoundItem).Row
                   as MVCProjectForms.SistemaBibliotecaDBDataSet.LivroRow;
-        
+
             switch (e.ColumnIndex)
             {
                 case 0:
                     {
-                        this.livroTableAdapter.DeleteQuery(livSelect.Id);
-                        
+                        LivroAutor livroautor = new LivroAutor()
+                        {
+                            LivroRow = livSelect
+                        };
+                        livroautor.ShowDialog();
+
+
                     }
                     break;
                 case 1:
+                    {
+                        this.livroTableAdapter.DeleteQuery(livSelect.Id);
+                    }
+                    break;
+                case 2:
                     {
                         frmEdicaoLivros editLivros = new frmEdicaoLivros();
                         editLivros.LivroRow = livSelect;
                         editLivros.ShowDialog();
 
                         this.livroTableAdapter.Update(editLivros.LivroRow);
-                    }break;
-                   
+                    }
+                    break;
+
             }
             this.livroTableAdapter.Fill(sistemaBibliotecaDBDataSet.Livro);
         }
