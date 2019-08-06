@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MyFirstWpfApp.Views.ucLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyFirstWpfApp.Views"
+             xmlns:y="clr-namespace:MyFirstWpfApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="0,0,-0.4,0" HorizontalAlignment="Right" Width="794">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="93*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="569*"/>
+            <ColumnDefinition Width="104*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Entrar" Grid.Column="3" Margin="134.2,8.6,152.6,0" VerticalAlignment="Top" Height="55" RenderTransformOrigin="0.512,-0.813" Grid.Row="2" Click="Button_Click"/>
+        <TextBox Name="tbxLogin" Grid.Column="3" Height="49" Margin="136.2,15.6,153.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox Name="tbxSenha" Grid.Column="3" Height="45" Margin="131.2,89,150.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>
