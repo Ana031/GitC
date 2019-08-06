@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.sistemaBibliotecaDBDataSet = new MVCProjectForms.SistemaBibliotecaDBDataSet();
-            this.locacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locacaoTableAdapter = new MVCProjectForms.SistemaBibliotecaDBDataSetTableAdapters.LocacaoTableAdapter();
+            this.deletar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.livroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +42,13 @@
             this.usuAltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datIncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datAltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sistemaBibliotecaDBDataSet = new MVCProjectForms.SistemaBibliotecaDBDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.locacaoTableAdapter = new MVCProjectForms.SistemaBibliotecaDBDataSetTableAdapters.LocacaoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,8 +56,11 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCoral;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deletar,
+            this.editar,
             this.idDataGridViewTextBoxColumn,
             this.livroDataGridViewTextBoxColumn,
             this.usuarioDataGridViewTextBoxColumn,
@@ -67,36 +72,33 @@
             this.datIncDataGridViewTextBoxColumn,
             this.datAltDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.locacaoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(582, 289);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // button1
+            // deletar
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(776, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.deletar.DataPropertyName = "Deletar";
+            this.deletar.HeaderText = "Deletar";
+            this.deletar.Name = "deletar";
+            this.deletar.ReadOnly = true;
+            this.deletar.Text = "Deletar";
+            this.deletar.UseColumnTextForButtonValue = true;
             // 
-            // sistemaBibliotecaDBDataSet
+            // editar
             // 
-            this.sistemaBibliotecaDBDataSet.DataSetName = "SistemaBibliotecaDBDataSet";
-            this.sistemaBibliotecaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locacaoBindingSource
-            // 
-            this.locacaoBindingSource.DataMember = "Locacao";
-            this.locacaoBindingSource.DataSource = this.sistemaBibliotecaDBDataSet;
-            // 
-            // locacaoTableAdapter
-            // 
-            this.locacaoTableAdapter.ClearBeforeFill = true;
+            this.editar.DataPropertyName = "Editar";
+            this.editar.HeaderText = "Editar";
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Text = "Editar";
+            this.editar.UseColumnTextForButtonValue = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -188,19 +190,46 @@
             this.datAltDataGridViewTextBoxColumn.ReadOnly = true;
             this.datAltDataGridViewTextBoxColumn.Width = 125;
             // 
+            // locacaoBindingSource
+            // 
+            this.locacaoBindingSource.DataMember = "Locacao";
+            this.locacaoBindingSource.DataSource = this.sistemaBibliotecaDBDataSet;
+            // 
+            // sistemaBibliotecaDBDataSet
+            // 
+            this.sistemaBibliotecaDBDataSet.DataSetName = "SistemaBibliotecaDBDataSet";
+            this.sistemaBibliotecaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(9, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(582, 52);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Adicionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // locacaoTableAdapter
+            // 
+            this.locacaoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmLocacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 459);
+            this.ClientSize = new System.Drawing.Size(609, 373);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLocacao";
             this.Text = "Locação";
             this.Load += new System.EventHandler(this.FrmLocacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +241,8 @@
         private SistemaBibliotecaDBDataSet sistemaBibliotecaDBDataSet;
         private System.Windows.Forms.BindingSource locacaoBindingSource;
         private SistemaBibliotecaDBDataSetTableAdapters.LocacaoTableAdapter locacaoTableAdapter;
+        private System.Windows.Forms.DataGridViewButtonColumn deletar;
+        private System.Windows.Forms.DataGridViewButtonColumn editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn livroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioDataGridViewTextBoxColumn;
