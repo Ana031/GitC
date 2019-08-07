@@ -4,27 +4,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyFirstWpfApp.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="0,0,1,-2.4">
+             mc:Ignorable="d" Width="326.4" Height="351.6">
+    <Grid Background="#FFC26868" HorizontalAlignment="Right" Width="326" Height="348" VerticalAlignment="Top" Margin="-27,1,21.8,0">
+        <Grid.Effect>
+            <DropShadowEffect Color="White" ShadowDepth="3"/>
+        </Grid.Effect>
         <Grid.RowDefinitions>
-            <RowDefinition Height="82*"/>
-            <RowDefinition Height="126*"/>
-            <RowDefinition Height="229*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="532*"/>
-            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="=" Margin="414,141,33,18.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="+" Margin="323,62,127,19.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="-" Margin="417,64,33,102.8" Grid.Column="1" Grid.Row="2" RenderTransformOrigin="0.468,0.313"/>
-        <Button Content="/" Margin="418,9,32,178.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="X" Margin="324,10,126,176.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="Delete" Margin="231,168,219,21.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="00" Margin="139,168,311,21.8" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+        <Image HorizontalAlignment="Left" Height="330" Margin="-128,-20,-327.6,0" VerticalAlignment="Top" Width="782" Source="/MyFirstWpfApp;component/Image/952354.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.945"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
+        <TextBox x:Name="screen" Margin="5,5,0,0" TextWrapping="Wrap" Text="" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Width="314" Height="65" VerticalAlignment="Top" Background="White">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button Content="1" Margin="5,233,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_14" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,13 +52,14 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="1" Margin="231,112,219,72.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="4" Margin="231,62,219,123.8" Click="Button_Click_1" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="7" Margin="232,11,218,177.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="2" Margin="140,113,310,73.8" Click="Button_Click_2" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="5" Margin="140,66,310,124.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="8" Margin="140,11,310,178.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="0" Margin="47,168,403,21.8" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+        <Button Content="4" Margin="5,180,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_10" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -50,10 +69,252 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="3" Margin="48,113,402,73.8" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="6" Margin="48,66,402,124.8" Click="Button_Click" Grid.Column="1" Grid.Row="2"/>
-        <Button Content="9" Margin="48,11,402,178.8" Grid.Column="1" Grid.Row="2"/>
-        <TextBox Grid.Column="1" Margin="47,53.4,36,11" Grid.Row="1" TextWrapping="Wrap" Text="" TextChanged="TextBox_TextChanged"/>
+        <Button Content="7" Margin="5,125,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_6" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="0" Margin="82,287,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_17" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="2" Margin="82,234,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click_3" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="5" Margin="83,180,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_11" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="8" Margin="83,126,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_7" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="." Margin="167,286,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_18" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="3" Margin="167,233,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_15" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="6" Margin="168,180,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_12" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="9" Margin="168,125,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_8" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="=" Margin="247,234,0,0" RenderTransformOrigin="0.501,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_16" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="101" VerticalAlignment="Top" HorizontalAlignment="Left" Width="73" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform Y="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="+" Margin="247,180,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_13" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="48" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="-" Margin="248,126,0,0" RenderTransformOrigin="0.5,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_9" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="49" VerticalAlignment="Top" HorizontalAlignment="Left" Width="70" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="/" Margin="246,72,0,0" RenderTransformOrigin="0.501,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_5" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="46" VerticalAlignment="Top" HorizontalAlignment="Left" Width="72" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform Y="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button  Content="Delete" Margin="83,74,0,0" RenderTransformOrigin="0.501,0.5" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" BorderThickness="1" FontFamily="Rockwell" FontSize="14" Click="Button_Click_4" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Height="46" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.502"/>
+                    <TranslateTransform Y="-0.001"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="X" HorizontalAlignment="Left" Margin="170,74,0,0" VerticalAlignment="Top" Width="69" Height="45" Foreground="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Click="Button_Click" Opacity="{DynamicResource {x:Static SystemParameters.CursorHeightKey}}" Background="Black">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
 
     </Grid>

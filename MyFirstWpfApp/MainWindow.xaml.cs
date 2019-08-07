@@ -28,8 +28,14 @@ namespace MyFirstWpfApp
 
         private void FormLogin_loginCorrect(object sender, EventArgs e)
         {
-            ucTaskForm.Visibility = Visibility.Visible;
-            MessageBox.Show("Que Show Cara");
+            ucDesignCalc.Visibility = Visibility.Hidden;
+            ucDesignCalc.Visibility = Visibility.Visible;
+
+        }
+
+        private void FormLogin_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

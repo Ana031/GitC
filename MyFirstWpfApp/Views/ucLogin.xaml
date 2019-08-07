@@ -9,9 +9,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="0,0,-0.4,0" HorizontalAlignment="Right" Width="794">
         <Grid.RowDefinitions>
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="93*"/>
+            <RowDefinition Height="185*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="132*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -20,8 +21,8 @@
             <ColumnDefinition Width="569*"/>
             <ColumnDefinition Width="104*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Entrar" Grid.Column="3" Margin="134.2,8.6,152.6,0" VerticalAlignment="Top" Height="55" RenderTransformOrigin="0.512,-0.813" Grid.Row="2" Click="Button_Click"/>
-        <TextBox Name="tbxLogin" Grid.Column="3" Height="49" Margin="136.2,15.6,153.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox Name="tbxSenha" Grid.Column="3" Height="45" Margin="131.2,89,150.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+        <Button Content="Entrar" Grid.Column="3" Margin="125.2,5.4,142.6,0" VerticalAlignment="Top" Height="55" RenderTransformOrigin="0.512,-0.813" Grid.Row="3" Click="Button_Click" FontFamily="Tw Cen MT" FontSize="20"/>
+        <TextBox Name="tbxLogin" Grid.Column="3" Height="43" Margin="134.2,13,153.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="2"/>
+        <TextBox Name="tbxSenha" Grid.Column="3" Height="44" Margin="137.2,17.2,156.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Row="1" TextDecorations="{x:Null}" HorizontalScrollBarVisibility="Disabled" />
     </Grid>
 </UserControl>

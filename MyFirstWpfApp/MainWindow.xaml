@@ -8,8 +8,17 @@
         mc:Ignorable="d"
         Title="Lanches" Height="450" Width="800">
     <Grid>
-        <y:ucLogin x:Name="FormLogin" loginCorrect="FormLogin_loginCorrect" ></y:ucLogin>
-        <y:ucTaskbar x:Name="ucTaskForm" Visibility="Hidden"></y:ucTaskbar>
+        <y:ucLogin x:Name="FormLogin" loginCorrect="FormLogin_loginCorrect" Margin="0,0,-0.4,0" Loaded="FormLogin_Loaded" >
+            <y:ucLogin.Background>
+                <ImageBrush Stretch="None"/>
+            </y:ucLogin.Background>
+        </y:ucLogin>
+
         <y:ucDesignCalc x:Name="ucDesignCalc" Visibility="Hidden"></y:ucDesignCalc>
+
+
+
     </Grid>
+
 </Window>
+    
