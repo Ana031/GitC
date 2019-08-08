@@ -1,0 +1,14 @@
+﻿<Window x:Class="CadastroComValidacaoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CadastroComValidacaoWPF"
+        xmlns:y="clr-namespace:CadastroComValidacaoWPF.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <y:TelaDeCadastro x:Name="FormCadastro" Eventos="FormCadastro_Eventos" Loaded="FormCadastro_Loaded" ></y:TelaDeCadastro>
+        <y:ucEntrada x:Name="ucentrada" Visibility="Hidden"></y:ucEntrada>
+    </Grid>
+</Window>
