@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp3.View.frmEditUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3.View"
+        mc:Ignorable="d"
+        Title="frmEditUser" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox Name="tbxName" HorizontalAlignment="Left" Height="66" Margin="74,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="430"/>
+        <TextBox Name="tbxLogin" HorizontalAlignment="Left" Height="66" Margin="74,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="430"/>
+        <TextBox Name="tbxSenha" HorizontalAlignment="Left" Height="66" Margin="74,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="430"/>
+        <Button Click="Button_Click" Content="Salvar" HorizontalAlignment="Left" Height="53" Margin="326,298,0,0" VerticalAlignment="Top" Width="181" FontSize="30"/>
+
+    </Grid>
+</Window>
