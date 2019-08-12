@@ -1,0 +1,116 @@
+<html>
+<head>
+    <style>
+        /* Classe especifica*/
+        .ButtomClass {
+            width: 100px;
+            height: 100px;
+        }
+
+        .esferasDeGiomar {
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border: 1px solid #808080;
+            border-radius: 50%;
+            position: absolute;
+        }
+        /* Para todas as tags inmput*/
+        input {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+        }
+
+        .screen {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div id="GiomarBalls" 
+             incrementX="true"
+             posleft="0" 
+             incrementY="true"
+             postop="50" 
+             class="esferasDeGiomar"></div>
+    </div>
+    <div>
+        <label id="lblGiomarBallsCount">Contador de esferas do giomar:{0} </label>
+    </div>
+    <div>
+        <input id="bntClickMe"
+               class="ButtomClass"
+               type="button"
+               value="Esferinha" onclick="CriarGiomar()" />
+    </div>
+    <script>
+        setInterval(Movimento, 10);
+
+        function Movimento() {
+            /*para obter todas as esferas dentro do nosso documento.*/
+            var esferasGiomar = document.getElementsByClassName('esferasDeGiomar');
+
+            for (var i = 0; i < esferasGiomar.length; i++) {
+                MovimentX(esferasGiomar[i])
+                MovimentoY(esferasGiomar[i])
+            }
+            
+        }
+        function MovimentoY(object) {
+
+            var posTop = object.getAttribute("postop");
+            /*Obter se o mesmo pode incrementar*/
+            var incrementY = object.getAttribute("incrementy");
+            /*Obter o ID do elemento especifico */
+            var idElement = object.getAttribute("id");
+
+
+            if (posTop < 500 && incrementY === "true") {
+                object.style.top = (posTop++).toString() + "px";
+            } else {
+                object.style.top = (posTop--).toString() + "px";
+                incrementY = false;
+                if (posTop <= 0)
+                    incrementY = true;
+            }
+
+            document.getElementById(idElement).setAttribute("incrementy", incrementY);
+            document.getElementById(idElement).setAttribute("postop", posTop);
+        }
+
+        function MovimentX(object) {
+            /*Obter o valor do left*/
+            var posLeft = object.getAttribute("posleft");
+            /*Obter se o mesmo pode incrementar*/
+            var incrementX = object.getAttribute("incrementx");
+            /*Obter o ID do elemento especifico */
+            var idElement = object.getAttribute("id");
+
+
+            if (posLeft < 500 && incrementX === "true") {
+                object.style.left = (posLeft++).toString() + "px";
+            } else {
+                object.style.left = (posLeft--).toString() + "px";
+                incrementX = false;
+                if (posLeft <= 0)
+                    incrementX = true;
+            }
+
+            document.getElementById(idElement).setAttribute("incrementx", incrementX);
+            document.getElementById(idElement).setAttribute("posleft", posLeft);
+        }
+
+        function CriarGiomar() {
+            var elementDoc = document.getElementsByClassName('screen')[0];
+            var elementLbl = document.getElementById('lblGiomarBallsCount');
+            var esferasGiomar = document.getElementsByClassName('esferasDeGiomar').length;
+
+            elementDoc.innerHTML += "<div id="+ esferasGiomar +" incrementX=\"true\" incrementY=\"true\" postop=\"50\"  posleft=\"0\" class=\"esferasDeGiomar\"></div>"
+            elementLbl.innerHTML = "Contador de esferas do giomar:" + esferasGiomar;
+        }
+    </script>
+</body>
+</html>
