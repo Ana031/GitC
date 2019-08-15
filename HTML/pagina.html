@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="deion" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Biblioteca HBSIS</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <style>
+        .btn-primary {
+            color: #fff;
+            background-color: #000000;
+            border-color: #000000;
+          } 
+       
+        .bd-placeholder-img {  
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+        }
+
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+
+    <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Biblioteca HBSIS</h1>
+        <label for="inputLogin" class="sr-only">E-mail</label>
+        <input type="email" id="inputLogin" class="form-control" placeholder="E-mail" required autofocus>
+        <label for="inputSenha" class="sr-only">Senha</label>
+        <input type="password" id="inputSenha" class="form-control" placeholder="Senha" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Aumentar()" style="height: 45px;font-size: 16px;">AUMENTAR</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="Diminuir()" style="height: 45px;font-size: 16px;">DIMINUIR</button>
+        <button id="inputLogin" class="btn btn-lg btn-primary btn-block" type="submit" onclick="Pesquisar()" style="height: 45px;font-size: 16px;">PESQUISAR</button>
+
+        <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var countIncrement = 16;
+            function Aumentar() {
+                var document1 = document.getElementById('inputLogin');
+                var document2 = document.getElementById('inputSenha');
+
+                document1.style.fontSize = (countIncrement++) + "px";
+                document2.style.fontSize = (countIncrement++) + "px";
+            }
+
+            function Diminuir() {
+                var document1 = document.getElementById('inputLogin');
+                var document2 = document.getElementById('inputSenha');
+
+                document1.style.fontSize = (countIncrement--) + "px";
+                document2.style.fontSize = (countIncrement--) + "px";
+            }
+
+
+            var foo = { email: 'Ana', senha: 123 };
+
+            var cad = Object.create(foo);
+
+            cad.temcadastro = true;
+
+            cad.email;
+
+            cad.senha;
+
+            cad.cadastro = [{
+                "Id": "1",
+                "Email": "anakarolinepopenga@gmail.com",
+                "Senha": "1234"
+            },
+            {
+
+                "Id": "2",
+                "Email": "jose@gmail.com",
+                "Senha": "1234"
+            }];
+
+
+            function Pesquisar() {
+                $.each(cad.cadastro,
+                    function (index, object) {
+                        var contentVal = $('#inputLogin').val();
+
+                        if (object.Email.indexOf(contentVal)) {
+                            alert('Encontrado');
+                        } 
+                    });
+            }
+        </script>
+    </form>
+</body>
+</html>
