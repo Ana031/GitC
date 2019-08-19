@@ -14,44 +14,44 @@ using WEBAPIRESTFULL.Models;
 namespace WEBAPIRESTFULL.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class EditorasController : ApiController
+    public class GenerosController : ApiController
     {
         private BibliotecaContextDB db = new BibliotecaContextDB();
 
-        // GET: api/Editoras
-        public IQueryable<Editoras> GetEditoras()
+        // GET: api/Generos
+        public IQueryable<Generos> GetGeneros()
         {
-            return db.Editoras.Where(x => x.Ativo == true);
+            return db.Generos.Where(x => x.Ativo == true);
         }
 
-        // GET: api/Editoras/5
-        [ResponseType(typeof(Editoras))]
-        public IHttpActionResult GetEditoras(int id)
+        // GET: api/Generos/5
+        [ResponseType(typeof(Generos))]
+        public IHttpActionResult GetGeneros(int id)
         {
-            Editoras editoras = db.Editoras.Find(id);
-            if (editoras == null)
+            Generos generos = db.Generos.Find(id);
+            if (generos == null)
             {
                 return NotFound();
             }
 
-            return Ok(editoras);
+            return Ok(generos);
         }
 
-        // PUT: api/Editoras/5
+        // PUT: api/Generos/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutEditoras(int id, Editoras editoras)
+        public IHttpActionResult PutGeneros(int id, Generos generos)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != editoras.Id)
+            if (id != generos.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(editoras).State = EntityState.Modified;
+            db.Entry(generos).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace WEBAPIRESTFULL.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EditorasExists(id))
+                if (!GenerosExists(id))
                 {
                     return NotFound();
                 }
@@ -72,36 +72,36 @@ namespace WEBAPIRESTFULL.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Editoras
-        //[ResponseType(typeof(Editoras))]
-        public IHttpActionResult PostEditoras(Editoras editoras)
+        // POST: api/Generos
+        //[ResponseType(typeof(Generos))]
+        public IHttpActionResult PostGeneros(Generos generos)
         {
             if (!ModelState.IsValid)
             {
-                if (ModelState.Keys.First().ToString() != "editoras.Id")
+                if (ModelState.Keys.First().ToString() != "generos.Id")
                     return BadRequest(ModelState);
             }
 
-            db.Editoras.Add(editoras);
+            db.Generos.Add(generos);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = editoras.Id }, editoras);
+            return CreatedAtRoute("DefaultApi", new { id = generos.Id }, generos);
         }
 
-        // DELETE: api/Editoras/5
-        [ResponseType(typeof(Editoras))]
-        public IHttpActionResult DeleteEditoras(int id)
+        // DELETE: api/Generos/5
+        [ResponseType(typeof(Generos))]
+        public IHttpActionResult DeleteGeneros(int id)
         {
-            Editoras editoras = db.Editoras.Find(id);
-            if (editoras == null)
+            Generos generos = db.Generos.Find(id);
+            if (generos == null)
             {
                 return NotFound();
             }
 
-            db.Editoras.Find(id).Ativo = false;
+            db.Generos.Find(id).Ativo = false;
             db.SaveChanges();
 
-            return Ok(editoras);
+            return Ok(generos);
         }
 
         protected override void Dispose(bool disposing)
@@ -113,9 +113,9 @@ namespace WEBAPIRESTFULL.Controllers
             base.Dispose(disposing);
         }
 
-        private bool EditorasExists(int id)
+        private bool GenerosExists(int id)
         {
-            return db.Editoras.Count(e => e.Id == id) > 0;
+            return db.Generos.Count(e => e.Id == id) > 0;
         }
     }
 }
