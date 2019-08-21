@@ -27,25 +27,15 @@ namespace WEBAPIRESTFULL.Models
         [Required]
         [StringLength(15)]
         public string Isbn { get; set; }
-
+       
         public int Genero { get; set; }
-
+       
         public int Editora { get; set; }
 
         public string Sinopse { get; set; }
 
         [StringLength(1000)]
         public string Observacoes { get; set; }
-
-        [JsonIgnore]
-        public virtual Editoras Editoras { get; set; }
-
-        [JsonIgnore]
-        public virtual Generos Generos { get; set; }
-        [JsonIgnore]
-        public virtual Usuarios Usuarios { get; set; }
-        [JsonIgnore]
-        public virtual Usuarios Usuarios1 { get; set; }
 
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -7,19 +7,21 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WEBAPIRESTFULL.Models;
 
 namespace WEBAPIRESTFULL.Controllers
 {
-    public class LocacaosController : ApiController
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    public class LocacaoController : ApiController
     {
         private BibliotecaContextDB db = new BibliotecaContextDB();
 
         // GET: api/Locacaos
         public IQueryable<Locacao> GetLocacao()
         {
-            return db.Locacao;
+            return db.Locacao.Where(x => x.Ativo == true);
         }
 
         // GET: api/Locacaos/5
@@ -71,12 +73,13 @@ namespace WEBAPIRESTFULL.Controllers
         }
 
         // POST: api/Locacaos
-        [ResponseType(typeof(Locacao))]
+        //[ResponseType(typeof(Locacao))]
         public IHttpActionResult PostLocacao(Locacao locacao)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                if (ModelState.Keys.First().ToString() != "locacao.Id")
+                    return BadRequest(ModelState);
             }
 
             db.Locacao.Add(locacao);

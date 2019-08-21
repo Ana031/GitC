@@ -24,6 +24,8 @@ namespace WEBAPIRESTFULL.Controllers
             return db.Livros.Where(x => x.Ativo == true);
         }
 
+        //api/Livros/Genero (rotas alternativas)
+
         // GET: api/Livros/5
         [ResponseType(typeof(Livros))]
         public IHttpActionResult GetLivros(int id)
